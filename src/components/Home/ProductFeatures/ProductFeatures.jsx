@@ -8,10 +8,8 @@ const iconMap = {
   settings: Settings,
 };
 
-// Realistic Apple SVG
 const AppleSVG = () => (
   <svg viewBox="0 0 120 140" className="w-28 h-32" fill="none">
-    {/* Shadow */}
     <ellipse cx="60" cy="130" rx="35" ry="6" fill="#00000015" />
 
     <defs>
@@ -60,7 +58,10 @@ const FruitDecoration = ({ type, position, delay }) => {
 
 const ProductFeatures = () => {
   return (
-    <section className="relative min-h-screen pt-24 overflow-hidden bg-white">
+    <section
+      className="relative min-h-screen pt-24 overflow-hidden bg-white"
+      id="why-us"
+    >
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.08; }

@@ -22,9 +22,11 @@ export default function ExportServices() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-28 gap-x-6 my-10">
           {Exportservices.map((item, i) => (
-            <div className="hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer">
+            <div
+              className="hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer"
+              key={i}
+            >
               <div
-                key={i}
                 data-aos="fade-up"
                 data-aos-delay={`${i * 100}`}
                 className="p-8 relative rounded-3xl bg-gradient-to-b from-primary/10 to-white shadow-md"
