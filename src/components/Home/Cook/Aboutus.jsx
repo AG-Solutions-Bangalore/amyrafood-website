@@ -12,7 +12,7 @@ const Aboutus = () => {
             className="absolute right-0 bottom-[-28%] xl:block hidden"
           >
             <img
-              src="/images/Cook/burger.png"
+              src="/images/common/orange-right.png"
               alt="burger-image"
               style={{ width: "auto", height: "400px" }}
             />
@@ -25,7 +25,7 @@ const Aboutus = () => {
             className="lg:col-span-6 flex lg:justify-start justify-center"
           >
             <img
-              src="/images/Cook/cook.webp"
+              src="/images/common/cook.webp"
               alt="cook"
               width={636}
               height={808}

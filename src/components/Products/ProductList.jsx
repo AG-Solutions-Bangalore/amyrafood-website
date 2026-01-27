@@ -1,11 +1,50 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ProductList = ({ products = [], title }) => {
   const navigate = useNavigate();
-
+  const location = useLocation();
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white relative">
       <div className="container">
+        {location.pathname == "/products/honey" && (
+          <div
+            data-aos="fade-left"
+            data-aos-delay="100"
+            className="absolute right-0 top-0 rotate-180 xl:block hidden"
+          >
+            <img
+              src="/images/honey/sidehoney.png"
+              alt="sidehoney-image"
+              style={{ width: "auto", height: "400px" }}
+            />
+          </div>
+        )}
+        {location.pathname == "/products/flour" && (
+          <div
+            data-aos="fade-up"
+            data-aos-delay="zoom-in"
+            className="absolute left-0 top-0 xl:block hidden"
+          >
+            <img
+              src="/images/common/maize.png"
+              alt="flour-image"
+              style={{ width: "auto", height: "250px" }}
+            />
+          </div>
+        )}
+        {location.pathname == "/products/pulp" && (
+          <div
+            data-aos="fade-left"
+            data-aos-delay="100"
+            className="absolute left-0 top-0 xl:block hidden"
+          >
+            <img
+              src="/images/common/orange-left.png"
+              alt="burger-image"
+              style={{ width: "auto", height: "200px" }}
+            />
+          </div>
+        )}
         <div
           className="text-center mb-14"
           data-aos="fade-up"
@@ -23,7 +62,7 @@ const ProductList = ({ products = [], title }) => {
           {products.map((item, index) => (
             <div
               key={item.id}
-              onClick={() => navigate(`/products/${item.category}/${item.id}`)}
+              // onClick={() => navigate(`/products/${item.category}/${item.id}`)}
               data-aos="fade-up"
             >
               <div className="group h-full border border-primary/20 rounded-2xl p-6 hover:shadow-lg flex flex-col hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer">
@@ -31,7 +70,7 @@ const ProductList = ({ products = [], title }) => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-56 object-cover transition duration-300 ease-in-out group-hover:scale-105"
+                    className="w-full h-56 object-contain transition duration-300 ease-in-out group-hover:scale-105"
                   />
                 </div>
 
@@ -41,7 +80,7 @@ const ProductList = ({ products = [], title }) => {
                   </h3>
 
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    {item.description}
+                    {item.shortdescription}
                   </p>
                 </div>
 

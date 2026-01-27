@@ -57,6 +57,8 @@ const Newsletter = () => {
               src="/images/Newsletter/newsletter.png"
               alt="soup"
               style={{ width: "auto", height: "400px", zIndex: -1 }}
+              className="absolute bottom-[20%] right-[20%]"
+
               // className="-mt-24"
             />
 
@@ -85,9 +87,9 @@ const Newsletter = () => {
               alt="yellow"
               width="59"
               height="59"
-              className="absolute top-[10%] left-0"
+              className="absolute top-[10%] left-[30%]"
               data-aos="fade-up"
-              data-aos-delay="600"
+              data-aos-delay="200"
             />
 
             <img
@@ -95,7 +97,7 @@ const Newsletter = () => {
               alt="blue"
               width="25"
               height="25"
-              className="absolute bottom-[20%] right-[20%]"
+              className="absolute bottom-[10%] right-[10%]"
               data-aos="fade-up"
               data-aos-delay="700"
             />

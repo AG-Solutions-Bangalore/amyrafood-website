@@ -6,6 +6,7 @@ import {
   riceProducts,
 } from "../../../data/siteData";
 import Breadcrumbs from "../../Breadcrumbs/Breadcrumbs";
+import ProductDescription from "./ProductDescription";
 
 const productMap = {
   flour: FlourProducts,
@@ -66,23 +67,32 @@ const ProductDetails = () => {
         ]}
       />
 
-      <section className="container py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="container py-16 text-center">
+        {/* BIG TITLE */}
+        {/* <h1 className="text-4xl font-bold mb-8">{product.name}</h1> */}
+  
+        {/* IMAGE CENTER */}
         <img
           src={product.image}
           alt={product.name}
-          className="w-full rounded-3xl shadow-lg"
+          className="mx-auto w-full max-w-xl h-[360px] object-contain rounded-2xl mb-10"
         />
 
-        <div>
-          <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
+        {/* GRAY TITLE */}
+        <h2 className="text-2xl font-semibold text-gray-500 mb-8">
+          {product.name}
+        </h2>
 
-          <p className="text-gray-600 leading-relaxed mb-6">
-            {product.description}
-          </p>
+        {/* DESCRIPTION */}
+        <div className="max-w-3xl mx-auto text-left">
+          <ProductDescription description={product.description} />
+        </div>
 
+        {/* CTA */}
+        <div className="mt-12">
           <button
             onClick={() => navigate("/contact")}
-            className="bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary/90 transition"
+            className="bg-primary text-white px-8 py-3 rounded-xl hover:bg-primary/90 transition"
           >
             Enquire Now
           </button>

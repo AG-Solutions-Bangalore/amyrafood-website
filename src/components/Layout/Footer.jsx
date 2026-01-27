@@ -24,8 +24,7 @@ const Footer = () => {
       <div className="absolute inset-0 bg-black/90"></div>
 
       <div className="relative z-10 container">
-        <div className="grid grid-cols-1 sm:grid-cols-6 lg:gap-20 md:gap-24 sm:gap-12 gap-12 pb-10">
-          {/* Logo & Social */}
+        <div className="grid grid-cols-1 sm:grid-cols-6 lg:gap-10 md:gap-24 sm:gap-12 gap-12 pb-10">
           <div className="col-span-2">
             <Logo />
 
@@ -80,9 +79,12 @@ const Footer = () => {
             <div className="flex flex-col gap-5">
               <div className="flex items-start">
                 <MapPin className="text-primary me-2" size={22} />
-                <p className="text-white/80 text-base">
-                  M02-355, M Floor, Plot No. 128-248, Al Kabeesi Area, Deira
-                  Dubai, United Arab Emirates{" "}
+                <p className="text-white/80 text-base leading-relaxed">
+                  M02-355, M Floor, Plot No. 128-248,
+                  <br />
+                  Al Kabeesi Area, Deira,
+                  <br />
+                  Dubai, United Arab Emirates
                 </p>
               </div>
 

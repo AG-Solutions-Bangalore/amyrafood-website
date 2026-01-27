@@ -69,16 +69,13 @@ const Breadcrumbs = ({
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+      {/* <div className="absolute inset-0 bg-black/30" /> */}
 
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        {/* Page Title */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 break-words text-white">
           {title}
         </h1>
 
-        {/* Breadcrumb */}
         <nav
           className="flex flex-wrap items-center justify-center gap-y-2 text-xs sm:text-sm text-white/80"
           aria-label="Breadcrumb"

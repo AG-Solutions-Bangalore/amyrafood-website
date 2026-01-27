@@ -1,8 +1,22 @@
+import { useLocation } from "react-router-dom";
 import { ProductInfoData } from "../../../data/siteData";
 
 const PulpSection = () => {
+  const location = useLocation();
   return (
-    <section className="py-24 bg-primary/10">
+    <section className="relative py-24 bg-primary/10">
+      <div
+        data-aos="zoom-in"
+        data-aos-delay="400"
+        className="absolute right-0 bottom-[-28%] z-20 xl:block hidden"
+      >
+        <img
+          src="/images/common/maize.png"
+          alt="maize-image"
+          style={{ width: "auto", height: "400px" }}
+        />
+      </div>
+
       <div className="container">
         <div
           className="text-center mb-10"
@@ -70,9 +84,11 @@ const PulpSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {ProductInfoData.map((item, i) => (
-            <div className="transition-all duration-700 hover:scale-105">
+            <div
+              className="transition-all duration-700 hover:scale-105"
+              key={item.id}
+            >
               <div
-                key={i}
                 data-aos="fade-up"
                 data-aos-delay={i * 150}
                 className="p-10 text-center backdrop-blur-md bg-primary/5 rounded-3xl relative  hover:bg-primary/10"
@@ -80,7 +96,7 @@ const PulpSection = () => {
                 <img
                   src={item.imgSrc}
                   alt={item.title}
-                  className="w-32 h-32 object-contain mx-auto mb-6"
+                  className="w-32 h-32 md:w-auto h-auto object-contain mx-auto mb-6"
                 />
 
                 <h3 className="text-2xl font-semibold text-black mb-3">
